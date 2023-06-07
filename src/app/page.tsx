@@ -1,9 +1,7 @@
-
-
 export default function Home() {
   return (
     <main>
-      e-com
+      <div>page</div>
     </main>
-  )
+  );
 }
