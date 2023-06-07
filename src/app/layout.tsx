@@ -16,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sora.className}>
+      <body className={`${sora.className} container`}>
         <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
