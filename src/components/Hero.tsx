@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { Button } from "./ui/button";
 const Hero = () => {
   return (
     <section className="flex mx-4 gap-4 justify-between mt-32">
-      <div className="w-2/4 space-y-12">
+      <div className="sm:w-2/4 space-y-12">
         {" "}
         {/* Hero-leftside div*/}
         <span className="text-[blue] bg-[#e1edff] px-4 py-2 rounded-lg font-bold">
@@ -34,7 +35,7 @@ const Hero = () => {
           Brands Brands Brands Brands Brands Brands Brands Brands Brands
         </div>
       </div>
-      <div className="w-2/4">
+      <div className="w-2/4 max-sm:hidden relative">
         {" "}
         {/* Hero-Right Section*/}
         <svg
@@ -43,10 +44,18 @@ const Hero = () => {
           className=""
         >
           <path
-            d="M163.1 83.6c9.8 26 2.7 61.6-17.1 74.9-19.9 13.3-52.5 4.3-78-14.3-25.6-18.6-44.1-46.8-37.6-68.3 6.5-21.4 38-36.2 67.2-35.4 29.1.8 55.8 17.1 65.5 43.1z"
-            fill="#F06"
+            fill="#FF0066"
+            d="M42.7,-72.9C54.7,-67,63.4,-54.3,71.2,-41C78.9,-27.7,85.8,-13.9,86.3,0.3C86.9,14.5,81.1,29,72.6,41.1C64.2,53.1,53,62.8,40.4,71.2C27.9,79.6,13.9,86.7,0.5,85.9C-13,85.1,-26.1,76.4,-39,68.2C-51.8,60,-64.6,52.3,-72.8,41C-81.1,29.8,-84.9,14.9,-85.1,-0.1C-85.2,-15.1,-81.7,-30.1,-74,-42.3C-66.3,-54.6,-54.3,-64,-41.3,-69.3C-28.2,-74.6,-14.1,-75.8,0.6,-76.8C15.3,-77.9,30.7,-78.8,42.7,-72.9Z"
+            transform="translate(100 100)"
           />
         </svg>
+        <Image
+          src="/assets/img/header.webp"
+          alt="katon-image"
+          width={900}
+          height={900}
+          className="absolute -top-14 right-0"
+        />
       </div>
     </section>
   );
