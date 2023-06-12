@@ -12,7 +12,7 @@ const Promo = () => {
       <div className="flex gap-4 max-md:flex-col">
         <div className="flex flex-col gap-4 ">
           <div className="flex items-center bg-[#d6d6d8] px-8 gap-2">
-            <div className="">
+            <div >
               <h3 className="font-bold text-3xl">GET UP TO 60%</h3>
               <p className="text-lg">For the summer season</p>
             </div>
@@ -21,7 +21,7 @@ const Promo = () => {
               alt="event1"
               width={200}
               height={200}
-              className=""
+              
             />
           </div>
           <div className="flex justify-center items-center flex-col py-12 px-8 bg-[#212121] text-white">
