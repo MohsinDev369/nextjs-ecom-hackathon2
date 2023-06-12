@@ -7,7 +7,9 @@ const Feature_Products = () => {
       <h2 className="tracking-[.03em] font-bold text-[32px] text-[#212121]">
         Check What We Have
       </h2>
-      <div>Slider</div>
+      <div>
+                                                  
+      </div>
     </section>
   );
 };

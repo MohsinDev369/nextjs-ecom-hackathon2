@@ -31,8 +31,11 @@ const Hero = () => {
           </svg>
           Start Shopping
         </Button>
-        <div>
-          Brands Brands Brands Brands Brands Brands Brands Brands Brands
+        <div className="flex gap-4">
+          <Image src="/assets/brandsLogo/Featured1.webp" alt="brandlogo"  width={100} height={35}/>
+          <Image src="/assets/brandsLogo/Featured2.webp" alt="brandlogo"  width={100} height={35}/>
+          <Image src="/assets/brandsLogo/Featured3.webp" alt="brandlogo"  width={100} height={35}/>
+          <Image src="/assets/brandsLogo/Featured4.webp" alt="brandlogo"  width={100} height={35}/>
         </div>
       </div>
       <div className="w-2/4 max-sm:hidden relative">
