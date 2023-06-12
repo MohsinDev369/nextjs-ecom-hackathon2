@@ -1,3 +1,4 @@
+import Feature_Products from "@/components/Feature_Products";
 import Hero from "@/components/Hero";
 import Promo from "@/components/Promo";
 
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <Hero />
       <Promo />
+      <Feature_Products />
     </div>
   );
 }

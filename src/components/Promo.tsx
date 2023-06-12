@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Promo = () => {
   return (
-    <section className="flex flex-col justify-center items-center p-4 gap-4">
+    <section className="flex flex-col justify-center items-center p-8 gap-4">
       <span className="text-center text-xs font-bold text-[#0062f5] tracking-widest">
         PROMOTIONS
       </span>
@@ -29,8 +29,8 @@ const Promo = () => {
               GET 30% Off
             </h3>
             <p className="text-sm">USE PROMO CODE</p>
-            <div className="font-bold text-lg tracking-[.25em] py-2 px-12 bg-[#474747] rounded-sm mt-2">
-              MOHSIN369
+            <div className="font-bold text-lg tracking-[.25em] py-2 px-12 bg-[#474747] rounded-sm mt-2 cursor-pointer">
+              MOHSINDEV369
             </div>
           </div>
         </div>
