@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 const Hero = () => {
   return (
-    <section className="flex mx-4 gap-4 justify-between mt-32">
+    <section className="flex mx-4 gap-4 justify-between mt-24">
       <div className="sm:w-2/4 space-y-12">
         {" "}
         {/* Hero-leftside div*/}
