@@ -17,3 +17,4 @@ your feedback and contributions are welcome!
 ## Preview
 ![alt text](./public/preview.png)
 ![alt text](./public/preview2.png)
+![alt text](./public/preview3.png)
