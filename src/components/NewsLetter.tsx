@@ -16,9 +16,9 @@ const NewsLetter = () => {
       <p className="mb-8 font-light text-base text-[#212121]">
         Get the latest information and promo offers directly
       </p>
-      <div>
-        <Input placeholder="Email Adress" className="mb-4"/>
-        <Button>Get Started</Button>
+      <div className="flex">
+        <Input placeholder="Email Adress" className="mb-4" />
+        <Button className="ml-4 truncate px-8 py-4">Get Started</Button>
       </div>
     </section>
   );

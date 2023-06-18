@@ -2,12 +2,9 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="grid grid-cols-2">
-      <div>
-        <div
-          id="logo"
-          className="flex flex-col justify-between md:w-[80%] max-lg:gap-8 w-full"
-        >
+    <footer className="">
+      <div className="grid grid-cols-4 mt-24 max-md:grid-cols-1 space-y-8">
+        <div id="logo" className="flex flex-col justify-between w-[80%]">
           <div className="mr-4">
             <Link href={"/"} className="text-xl font-extrabold">
               Mohsin E Shop
@@ -68,18 +65,39 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div id="company">
-          <h3>Company</h3>
-          <ul>
-            <li>About</li>
-            <li>Terms of Use</li>
-            <li>Privacy Policy</li>
-            <li>How it Works</li>
-            <li>Contact Us</li>
+        <div id="company" className="">
+          <h3 className="font-bold text-xl text-[#666] mb-4">Company</h3>
+          <ul className="space-y-4">
+            <li className="text-[#666]">About</li>
+            <li className="text-[#666]">Terms of Use</li>
+            <li className="text-[#666]">Privacy Policy</li>
+            <li className="text-[#666]">How it Works</li>
+            <li className="text-[#666]">Contact Us</li>
+          </ul>
+        </div>
+
+        <div id="Support" className="">
+          <h3 className="font-bold text-xl text-[#666] mb-4">Support</h3>
+          <ul className="space-y-4">
+            <li className="text-[#666]">Support Carrer</li>
+            <li className="text-[#666]">24h Service</li>
+            <li className="text-[#666]">Quick Chat</li>
+          </ul>
+        </div>
+        <div id="Contact" className="">
+          <h3 className="font-bold text-xl text-[#666] mb-4">Contact</h3>
+          <ul className="space-y-4">
+            <li className="text-[#666]">Whatsapp</li>
+            <li className="text-[#666]">Support 24h</li>
           </ul>
         </div>
       </div>
-      <div></div>
+      <div
+        id="copyright"
+        className="mt-12 grid sm:grid-cols-2 border-t border-[#666]"
+      >
+        Copyright
+      </div>
     </footer>
   );
-}
+};
