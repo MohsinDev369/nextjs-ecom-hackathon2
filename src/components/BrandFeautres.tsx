@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const BrandFeautres = () => {
   return (
-    <section className="mt-24 mb-24">
+    <section className="mt-24 mb-24 overflow-hidden">
       <div className="flex justify-center mb-12">
         <div id="title" className="flex lg:justify-end  sm:p-8">
           <h1 className="font-bold text-[2.75rem] leading-[55px] tracking-[0.03em] sm:w-[80%] xl:w-[45%] text-[#212121]">
