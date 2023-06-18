@@ -92,11 +92,28 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
+      {/* Lower Border */}
       <div
         id="copyright"
-        className="mt-12 grid sm:grid-cols-2 border-t border-[#666]"
+        className="mt-12 mb-8 flex justify-evenly gap-4 max-md:flex-col border-t border-[#666]"
       >
-        Copyright
+        <p className="sm:my-8 sm:mx-32 font-normal text-base text-[#666]">
+          Copyright © 2023 Dine Market
+        </p>
+        <p className="sm:my-8 sm:mx-32 font-normal text-base text-[#666]">
+          Design by.
+          <span className="font-bold text-base text-[#212121]">
+            Weird Design Studio
+          </span>
+        </p>
+        <p className="sm:my-8 sm:mx-32 font-normal text-base text-[#666]">
+          Code by.
+          <a href="https://github.com/MohsinDev369" target="_blank">
+            <span className="font-bold text-base text-[#212121]">
+              MohsinDev369
+            </span>
+          </a>
+        </p>
       </div>
     </footer>
   );
