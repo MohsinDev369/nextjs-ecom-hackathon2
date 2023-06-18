@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sora.className} container overflow-hidden`}>
+      <body className={`${sora.className} container`}>
         <Header />
         <main>{children}</main>
       </body>
