@@ -1,13 +1,51 @@
 import products from "@/dum_db/db";
+import { Divide } from "lucide-react";
+import Image from "next/image";
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default function Page({ params }: { params: { slug: string } }): any {
   return (
-      <>
-          <div id="all-product-container"></div>
-      {params.slug}
-          {products.map((i) => {
-          return <div key={i.namee}></div>
-      })}
-    </>
+    <div className="flex flex-wrap gap-4">
+      {products.map((product, i) => {
+        if (product.category === params.slug) {
+          return (
+            <div key={i}>
+              {" "}
+              <Image
+                src={product.src}
+                alt={product.namee}
+                width={300}
+                height={300}
+                className=""
+              />
+              <div className="product-info">
+                <h3 className="text-lg font-bold">{product.namee}</h3>
+                {product.price && (
+                  <p className="text-gray-500">{product.price}</p>
+                )}
+              </div>
+            </div>
+          );
+        } else if (params.slug === "all_products")
+          return (
+            <div key={i}>
+              <Image
+                src={product.src}
+                alt={product.namee}
+                width={300}
+                height={300}
+                className=""
+              />
+              <div className="product-info">
+                <h3 className="text-lg font-bold">{product.namee}</h3>
+                {product.price && (
+                  <p className="text-gray-500">{product.price}</p>
+                )}
+              </div>
+            </div>
+          );
+      }
+      
+      )}
+    </div>
   );
 }
