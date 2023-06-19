@@ -10,16 +10,16 @@ const Header = () => {
       </div>
       <nav className="max-sm:hidden">
         <ul className="flex gap-12 truncate ">
-          <Link href={"#"}>
+          <Link href={"/male"}>
             <li>Male</li>
           </Link>
-          <Link href={"#"}>
+          <Link href={"/femail"}>
             <li>Femail</li>
           </Link>
-          <Link href={"#"}>
+          <Link href={"/kids"}>
             <li>Kids</li>
           </Link>
-          <Link href={"#"}>
+          <Link href={"/all_products"}>
             <li>All Products</li>
           </Link>
         </ul>

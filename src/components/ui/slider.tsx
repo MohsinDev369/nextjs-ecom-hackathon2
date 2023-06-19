@@ -1,75 +1,30 @@
 import Image from "next/image";
-
-let imges = [
-  {
-    namee: "Brushed Raglan Sweatshirt",
-    src: "/assets/img_slider/slider_img1.png",
-    price: "$195",
-  },
-  {
-    namee: "Cameryn Sash Tie Dress",
-    src: "/assets/img_slider/slider_img2.png",
-    price: "$175",
-  },
-  {
-    namee: "Flex Sweatshirt",
-    src: "/assets/img_slider/slider_img3.png",
-  },
-  {
-    namee: "Flex Sweatpants",
-    src: "/assets/img_slider/slider_img4.png",
-    price: "$175",
-  },
-  {
-    namee: "Flex Sweatpants",
-    src: "/assets/img_slider/slider_img5.png",
-    price: "$175",
-  },
-  {
-    namee: "Flex Sweatpants",
-    src: "/assets/img_slider/slider_img6.png",
-    price: "$175",
-  },
-  {
-    namee: "Flex Sweatpants",
-    src: "/assets/img_slider/slider_img7.png",
-    price: "$175",
-  },
-  {
-    namee: "Flex Sweatpants",
-    src: "/assets/img_slider/slider_img8.png",
-    price: "$175",
-  },
-  {
-    namee: "Flex Sweatpants",
-    src: "/assets/img_slider/slider_img9.png",
-    price: "$175",
-  },
-  {
-    namee: "Flex Sweatpants",
-    src: "/assets/img_slider/slider_img10.png",
-    price: "$175",
-  },
-  {
-    namee: "Flex Sweatpants",
-    src: "/assets/img_slider/slider_img11.png",
-    price: "$175",
-  },
-];
+import products from "../../dum_db/db";
+import Link from "next/link";
 
 const slider = () => {
-  return (
-    <div className="flex gap-4 overflow-auto touch-auto scroll-smooth">
-      {imges.map((i) => {
-        return (
-          <>
-            <Image src={i.src} alt="images" width={300} height={300} />
-            {/* <p className="font-bold text-lg">{i.namee}</p>
-            <p className="font-bold text-lg">{i.price}</p> */}
-          </>
-        );
-      })}
-    </div>
-  );
+   return (
+     <div className="">
+       <div className="flex gap-4 overflow-auto touch-auto scroll-smoot">
+         {products.map((product, index) => (
+           <div key={index} className="w-auto">
+             <Image
+               src={product.src}
+               alt={product.namee}
+               width={300}
+               height={300}
+               className=""
+             />
+             <div className="product-info">
+               <h3 className="text-lg font-bold">{product.namee}</h3>
+               {product.price && (
+                 <p className="text-gray-500">{product.price}</p>
+               )}
+             </div>
+           </div>
+         ))}
+       </div>
+     </div>
+   );
 };
 export default slider;
