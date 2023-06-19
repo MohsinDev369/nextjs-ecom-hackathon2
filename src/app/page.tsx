@@ -15,7 +15,6 @@ export default function Home() {
       <Feature_Products />
       <BrandFeautres />
       <NewsLetter />
-      <Footer />
     </div>
   );
 }
