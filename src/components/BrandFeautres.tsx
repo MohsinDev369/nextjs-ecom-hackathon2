@@ -44,7 +44,10 @@ const BrandFeautres = () => {
             <p>Lorem ipsum dolor sit amt, consectetur adipiscing elit</p>
           </div>
         </div>
-        <div id="right" className="flex justify-center items-center gap-10 max-sm:flex-col">
+        <div
+          id="right"
+          className="flex justify-center items-center gap-10 max-sm:flex-col"
+        >
           <Image
             src={"/assets/img_slider/slider_img7.png"}
             alt="image of hood girl"
@@ -58,7 +61,9 @@ const BrandFeautres = () => {
               color is the actual natural color of the fiber, undyed and 100%
               traceable.
             </p>
-            <Button className="w-1/2" >See All Products</Button>
+            <Button className="w-1/2 whitespace-nowrap">
+              See All Products
+            </Button>
           </div>
         </div>
       </div>
