@@ -5,14 +5,14 @@ import Link from "next/link";
 const slider = () => {
    return (
      <div className="">
-       <div className="flex gap-4 overflow-auto touch-auto scroll-smoot">
+       <div className="flex gap-4 flex-wrap">
          {products.map((product, index) => (
-           <div key={index} className="w-auto">
+           <div key={index}>
              <Image
                src={product.src}
                alt={product.namee}
-               width={300}
-               height={300}
+               width={200}
+               height={200}
                className=""
              />
              <div className="product-info">
