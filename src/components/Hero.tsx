@@ -9,7 +9,9 @@ const Hero = () => {
         <span className="text-[blue] bg-[#e1edff] px-4 py-2 rounded-lg font-bold">
           Sale 70%
         </span>
-        <h1 className="font-bold text-5xl">An Industrial Take on Streetwear</h1>
+        <h1 className="font-bold sm:text-5xl text-[2.75rem]">
+          An Industrial Take on Streetwear
+        </h1>
         <p className="w-2/3">
           Anyone can beat you but no one can beat your outfit as long as you
           wear Dine outfits.
