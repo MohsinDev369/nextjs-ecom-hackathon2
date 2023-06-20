@@ -8,7 +8,7 @@ const slider = () => {
        <div className="flex gap-4 flex-wrap">
          {products.map((product, index) => (
            <div key={index}>
-             <Link href={product.slug}>
+             <Link href={`/products/${product.slug}`}>
                <Image
                  src={product.src}
                  alt={product.namee}

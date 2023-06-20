@@ -11,7 +11,7 @@ export default function Page({ params }: { params: { slug: string } }): any {
           return (
             <div key={i}>
               {" "}
-              <Link href={product.slug}>
+              <Link href={`/products/${product.slug}`}>
                 <Image
                   src={product.src}
                   alt={product.namee}
@@ -31,7 +31,7 @@ export default function Page({ params }: { params: { slug: string } }): any {
         } else if (params.slug === "all_products")
           return (
             <div key={i}>
-              <Link href={product.slug}>
+              <Link href={`/products/${product.slug}`}>
                 <Image
                   src={product.src}
                   alt={product.namee}
