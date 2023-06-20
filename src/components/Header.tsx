@@ -52,6 +52,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="sm:hidden">
+        {/* humbarger menu start */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
