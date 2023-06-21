@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import products from "@/dum_db/db";
 import Image from "next/image";
-import Link from "next/link";
+import db from "@/dum_db/db";
 
-export default function Page({ params }: { params: { slug: string } }): any {
+export default function Page({ params }: { params: { slug: string } }) {
+  let product = products.find((i) => i.slug===params.slug);
   return (
     <section className="bg-[#fcfcfc] sm:p-16 overflow-hidden">
       <div className="flex justify-between max-lg:flex-col">
@@ -13,7 +14,7 @@ export default function Page({ params }: { params: { slug: string } }): any {
         >
           <div className="flex flex-col gap-4">
             <Image
-              src={"/assets/img_slider/slider_img1.png"}
+              src={`${product?.src}`}
               alt="imag"
               height={100}
               width={100}
@@ -21,7 +22,7 @@ export default function Page({ params }: { params: { slug: string } }): any {
           </div>
           <div className="w-[80%] h-full">
             <Image
-              src={"/assets/img_slider/slider_img1.png"}
+              src={`${product?.src}`}
               alt="imag"
               height={500}
               width={500}
@@ -33,7 +34,7 @@ export default function Page({ params }: { params: { slug: string } }): any {
           className="flex flex-col flex-shrink-[1] flex-grow-[1] gap-10 mt-16"
         >
           <div>
-            <h3 className="text-2xl text-[#212121]">Cameryn Sash Tie Dress</h3>
+            <h3 className="text-2xl text-[#212121]">{ product?.namee}</h3>
             <span className="font-semibold text-xl opacity-30 ">Dress</span>
           </div>
           <div className="space-y-12">
@@ -57,7 +58,7 @@ export default function Page({ params }: { params: { slug: string } }): any {
             </div>
             <div id="addtocart" className="flex items-center gap-4">
               <Button>Add to cart</Button>
-              <p className="font-bold text-2xl text-[#212121]">$126</p>
+              <p className="font-bold text-2xl text-[#212121]">{ product?.price}</p>
             </div>
           </div>
         </div>
@@ -80,7 +81,10 @@ export default function Page({ params }: { params: { slug: string } }): any {
             Product Information
           </h2>
         </div>
-        <div id="desc-details" className="flex z-[2] max-sm:flex-col max-sm:gap-4">
+        <div
+          id="desc-details"
+          className="flex z-[2] max-sm:flex-col max-sm:gap-4"
+        >
           <h4 className="flex-1 font-bold text-base text-[#666] ">
             PRODUCT DETAILS
           </h4>
