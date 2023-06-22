@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const BrandFeautres = () => {
   return (
@@ -61,9 +62,11 @@ const BrandFeautres = () => {
               color is the actual natural color of the fiber, undyed and 100%
               traceable.
             </p>
-            <Button className="w-1/2 whitespace-nowrap">
-              See All Products
-            </Button>
+            <Link href={"all_products"}>
+              <Button className="w-1/2 whitespace-nowrap">
+                See All Products
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
