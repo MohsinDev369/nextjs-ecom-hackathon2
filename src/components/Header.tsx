@@ -42,7 +42,7 @@ const Header = () => {
         placeholder="Search"
       />
       <div className="relative">
-        <Link href={"#"}>
+        <Link href={"/cart"}>
           {/* Red ping animation start */}
           <div className="absolute bg-red-500 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1 animate-ping"></div>
           <div className="absolute bg-red-500 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1"></div>{" "}
@@ -87,7 +87,7 @@ const Header = () => {
               <SheetTitle>Mohsin E Shop</SheetTitle>
               <SheetDescription>
                 <ul className="flex flex-col gap-4 items-center">
-                  <Link href={"/"}>
+                  <Link href={"/cart"}>
                     <SheetClose asChild>
                       <li>
                         <svg
