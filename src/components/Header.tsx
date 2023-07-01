@@ -14,7 +14,7 @@ import { Button } from "./ui/button";
 
 const Header = () => {
   return (
-    <header className="flex my-8 mx-4 sm:justify-between max-sm:justify-between items-center gap-2">
+    <header className="flex p-4 my-8 mx-4 sm:justify-between max-sm:justify-between items-center gap-2 sticky top-0">
       <div className="mr-4">
         <Link href={"/"} className="text-xl font-extrabold">
           Mohsin E Shop
