@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Page({ params }: { params: { slug: string } }): any {
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 justify-center items-center">
       {products.map((product, i) => {
         if (product.category === params.slug) {
           return (
