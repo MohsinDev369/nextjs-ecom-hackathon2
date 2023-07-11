@@ -11,8 +11,8 @@ export function ToastWithAction({ children }: { children: React.ReactNode }) {
     <Button
       onClick={() => {
         toast({
-          // title: "Added To Cart",
-          description: "The Product is added to cart",
+          title: "Added To Cart",
+          // description: "The Product is added to cart",
           action: <ToastAction altText="Remove">Remove</ToastAction>,
         });
       }}
