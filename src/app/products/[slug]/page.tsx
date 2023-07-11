@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import products from "@/dum_db/db";
 import Image from "next/image";
 import db from "@/dum_db/db";
+import { ToastWithAction } from "@/components/ToastWithAction";
 
 export default function Page({ params }: { params: { slug: string } }) {
-  let product = products.find((i) => i.slug===params.slug);
+  let product = products.find((i) => i.slug === params.slug);
   return (
     <section className="bg-[#fcfcfc] sm:p-16 overflow-hidden">
       <div className="flex justify-between max-lg:flex-col">
@@ -34,7 +35,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           className="flex flex-col flex-shrink-[1] flex-grow-[1] gap-10 mt-16"
         >
           <div>
-            <h3 className="text-2xl text-[#212121]">{ product?.namee}</h3>
+            <h3 className="text-2xl text-[#212121]">{product?.namee}</h3>
             <span className="font-semibold text-xl opacity-30 ">Dress</span>
           </div>
           <div className="space-y-12">
@@ -57,8 +58,11 @@ export default function Page({ params }: { params: { slug: string } }) {
               </div>
             </div>
             <div id="addtocart" className="flex items-center gap-4">
-              <Button>Add to cart</Button>
-              <p className="font-bold text-2xl text-[#212121]">{ product?.price}</p>
+              <ToastWithAction>Add to cart</ToastWithAction>
+
+              <p className="font-bold text-2xl text-[#212121]">
+                {product?.price}
+              </p>
             </div>
           </div>
         </div>

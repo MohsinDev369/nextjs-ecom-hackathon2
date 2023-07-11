@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import "./globals.css";
 import { Sora } from "next/font/google";
 import { Footer } from "@/components/Footer";
-
+import { Toaster } from "@/components/ui/toaster";
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata = {
@@ -20,6 +20,7 @@ export default function RootLayout({
       <body className={`${sora.className} container`}>
         <Header />
         <main>{children}</main>
+        <Toaster />
         <Footer />
       </body>
     </html>
