@@ -41,7 +41,7 @@ const Header = () => {
         className="sm:w-1/3 min-w-[6em]"
         placeholder="Search"
       />
-      <div className="relative">
+      <div id="cart-container" className="relative">
         <Link href={"/cart"}>
           {/* Red ping animation start */}
           <div className="absolute bg-red-500 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1 animate-ping"></div>
