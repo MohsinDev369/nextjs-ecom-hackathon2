@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import products from "@/dum_db/db";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,6 +25,7 @@ export default function Page({ params }: { params: { slug: string } }): any {
                     <p className="text-gray-500">{product.price}</p>
                   )}
                 </div>
+                <Button>View Product</Button>
               </Link>
             </div>
           );
@@ -44,6 +46,7 @@ export default function Page({ params }: { params: { slug: string } }): any {
                     <p className="text-gray-500">{product.price}</p>
                   )}
                 </div>
+                <Button>View Product</Button>
               </Link>
             </div>
           );
