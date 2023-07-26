@@ -1,5 +1,5 @@
 const cart = () => {
-  return <div>cart</div>;
+  return <h1>cart</h1>;
 };
 
 export default cart;
