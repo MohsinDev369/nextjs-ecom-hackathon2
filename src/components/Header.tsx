@@ -1,6 +1,7 @@
+'use client'
 import { Input } from "./ui/input";
 import Link from "next/link";
-
+import {useSelector} from 'react-redux'
 import {
   Sheet,
   SheetClose,
@@ -12,6 +13,8 @@ import {
 } from "@/components/ui/sheet";
 
 const Header = () => {
+  const { cartItems } = useSelector((state: { cart: any }) => state.cart);
+  // console.log(cartItems);
   return (
     <header className="flex my-8 p-2 sm:justify-between max-sm:justify-between items-center gap-2 sticky top-0 z-10 bg-white">
       <div className="mr-4">
@@ -44,7 +47,9 @@ const Header = () => {
         <Link href={"/cart"}>
           {/* Red ping animation start */}
           <div className="absolute bg-red-500 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1 animate-ping"></div>
-          <div className="absolute bg-red-500 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1"></div>{" "}
+          <div className="absolute bg-red-500 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1">
+            {cartItems.length}
+          </div>{" "}
           {/* Cart SVG */}
           <svg
             xmlns="http://www.w3.org/2000/svg"

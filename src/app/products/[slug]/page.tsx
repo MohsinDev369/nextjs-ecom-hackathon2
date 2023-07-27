@@ -1,11 +1,14 @@
-import { Button } from "@/components/ui/button";
+'use client'
 import products from "@/dum_db/db";
 import Image from "next/image";
 import db from "@/dum_db/db";
 import { ToastWithAction } from "@/components/ToastWithAction";
+import {useDispatch} from 'react-redux'
+import {add} from '@/Redux/CartSlice'
 
 export default function Page({ params }: { params: { slug: string } }) {
   let product = products.find((i) => i.slug === params.slug);
+  const dispatch = useDispatch()
   return (
     <section className="bg-[#fcfcfc] sm:p-16 overflow-hidden">
       <div className="flex justify-between max-lg:flex-col">
@@ -57,7 +60,11 @@ export default function Page({ params }: { params: { slug: string } }) {
                 <div>+</div>
               </div>
             </div>
-            <div id="addtocart" className="flex items-center gap-4">
+            <div
+              id="addtocart"
+              className="flex items-center gap-4"
+              onClick={() => dispatch(add(product))}
+            >
               <ToastWithAction>Add to cart</ToastWithAction>
 
               <p className="font-bold text-2xl text-[#212121]">

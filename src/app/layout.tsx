@@ -3,7 +3,7 @@ import "./globals.css";
 import { Sora } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
-
+import ReduxProvider from "@/Redux/ReduxProvider";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sora.className} container`}>
-        <Header />
-        <main>
-          {children}
-        </main>
+        <ReduxProvider>
+          <Header />
+          <main>{children}</main>
+        </ReduxProvider>
         <Toaster />
         <Footer />
       </body>
