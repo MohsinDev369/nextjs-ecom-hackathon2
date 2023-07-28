@@ -2,15 +2,12 @@ import { Button } from "@/components/ui/button";
 import products from "@/dum_db/db";
 import Image from "next/image";
 import Link from "next/link";
-
-export default function Page({ params }: { params: { slug: string } }): any {
+const page = () => {
   return (
-    <div className="flex flex-wrap gap-4 justify-center items-center">
-      {products.map((product, i) => {
-        if (product.category === params.slug) {
+      <div className="flex flex-wrap gap-4 justify-center items-center">
+        {products.map((product, i) => {
           return (
             <div key={i}>
-              {" "}
               <Link href={`/products/${product.slug}`}>
                 <Image
                   src={product.src}
@@ -29,8 +26,9 @@ export default function Page({ params }: { params: { slug: string } }): any {
               </Link>
             </div>
           );
-        } 
-      })}
+        })}
     </div>
   );
-}
+};
+
+export default page;
