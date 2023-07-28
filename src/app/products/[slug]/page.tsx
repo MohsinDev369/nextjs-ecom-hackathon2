@@ -1,15 +1,17 @@
-'use client'
+"use client";
 import products from "@/dum_db/db";
 import Image from "next/image";
-import db from "@/dum_db/db";
+
 import { ToastWithAction } from "@/components/ToastWithAction";
-import {add,remove} from '@/Redux/CartSlice'
-import {useDispatch} from 'react-redux'
+import { add } from "@/Redux/CartSlice";
+import { useDispatch } from "react-redux";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function Page({ params }: { params: { slug: string } }) {
+  const [count, setCount] = useState(0);
   let product = products.find((i) => i.slug === params.slug);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <section className="bg-[#fcfcfc] sm:p-16 overflow-hidden">
       <div className="flex justify-between max-lg:flex-col">
@@ -56,9 +58,9 @@ export default function Page({ params }: { params: { slug: string } }) {
             <div id="product-quantity" className="flex gap-8 items-center">
               <h4 className="font-bold">Quantity:</h4>
               <div className="flex gap-8">
-                <Button>-</Button>
-                <div>{product?.quantity}</div>
-                <Button onClick={() => dispatch(add(product))}>+</Button>
+                <Button onClick={() => count && setCount(count - 1)}>-</Button>
+                <div>{count}</div>
+                <Button onClick={() => setCount(count + 1)}>+</Button>
               </div>
             </div>
             <div
