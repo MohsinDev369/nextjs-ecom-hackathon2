@@ -27,6 +27,7 @@ const cartSlice = createSlice({
             const product = state.cartItems.find((p) => p.slug === action.payload.slug);
             product ? state.cartItems[state.cartItems.indexOf(product)] = { ...action.payload, quantity: product.quantity +1 } : state.cartItems.push(action.payload) 
             // console.log(state.cartItems.map(i => i.quantity));
+             console.log(action.payload);
         },
         remove(state, action) {
             const itemId = action.payload.slug;
