@@ -3,8 +3,9 @@ import products from "@/dum_db/db";
 import Image from "next/image";
 import db from "@/dum_db/db";
 import { ToastWithAction } from "@/components/ToastWithAction";
+import {add,remove} from '@/Redux/CartSlice'
 import {useDispatch} from 'react-redux'
-import {add} from '@/Redux/CartSlice'
+import { Button } from "@/components/ui/button";
 
 export default function Page({ params }: { params: { slug: string } }) {
   let product = products.find((i) => i.slug === params.slug);
@@ -52,12 +53,12 @@ export default function Page({ params }: { params: { slug: string } }) {
               <li>L</li>
               <li>XL</li>
             </ul>
-            <div id="product-quantity" className="flex gap-8">
+            <div id="product-quantity" className="flex gap-8 items-center">
               <h4 className="font-bold">Quantity:</h4>
               <div className="flex gap-8">
-                <div>-</div>
-                <div>N</div>
-                <div>+</div>
+                <Button>-</Button>
+                <div>{product?.quantity}</div>
+                <Button onClick={() => dispatch(add(product))}>+</Button>
               </div>
             </div>
             <div

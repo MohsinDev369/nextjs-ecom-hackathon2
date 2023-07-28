@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { remove } from "@/Redux/CartSlice";
+import {remove } from "@/Redux/CartSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
