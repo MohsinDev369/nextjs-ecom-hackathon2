@@ -13,13 +13,13 @@ const Cart = () => {
       <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
       <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
         <div className="rounded-lg md:w-2/3">
-          {cartItems.map((item:any) => (
+          {cartItems.map((item: any) => (
             <div
               className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
               key={item.slug}
             >
               <Image
-                src="/assets/product_img/slider_img1.png"
+                src={item.src}
                 alt="product-image"
                 className="w-full rounded-lg sm:w-40"
                 height={200}
@@ -30,7 +30,7 @@ const Cart = () => {
                   <h2 className="text-lg font-bold text-gray-900">
                     {item.namee}
                   </h2>
-                  <p className="mt-1 text-xs text-gray-700">36EU - 4US</p>
+                  <p className="mt-1 text-xs text-gray-700">{item.price}</p>
                 </div>
                 <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                   <div className="flex items-center border-gray-100">
@@ -50,7 +50,7 @@ const Cart = () => {
                     </span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <p className="text-sm">259.000 ₭</p>
+                    <p className="text-sm">259.000</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
