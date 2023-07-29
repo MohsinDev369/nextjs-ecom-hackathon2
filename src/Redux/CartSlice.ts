@@ -24,16 +24,19 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         add(state, action) {
-            const product = state.cartItems.find((p) => p.slug === action.payload.slug);
+            const [ item, n ] = action.payload;
+            // console.log(item.slug);
+            const product = state.cartItems.find((p) => p.slug === item.slug /*|| console.log(p.slug,item.slug) */);
+            // console.log(product);
             // state.cartItems.push({ ...action.payload, quantity: action.payload.quantity + 1 })
-            product ? state.cartItems[state.cartItems.indexOf(product)] = { ...action.payload, quantity: product.quantity + 1 } : state.cartItems.push({ ...action.payload, quantity: action.payload.quantity + 1 })
-            // console.log(state.cartItems.map(i => i.quantity));
+            product ? state.cartItems[state.cartItems.indexOf(product)] = { ...item, quantity: product.quantity + n } : state.cartItems.push({ ...item, quantity: item.quantity + 1 })
+            // console.log(state.cartItems.map(i => i.slug));
             //  console.log(action.payload);
         },
         remove(state, action) {
             const product = state.cartItems.find((p) => p.slug === action.payload.slug);
             // state.cartItems.push({ ...action.payload, quantity: action.payload.quantity + 1 })
-            product && product.quantity>1 ? state.cartItems[state.cartItems.indexOf(product)] = { ...action.payload, quantity: product.quantity - 1 } : undefined
+            product && product.quantity>1 ? state.cartItems[state.cartItems.indexOf(product)] = { ...action.payload, quantity: product.quantity - 1 } :  0
             // console.log(state.cartItems.map(i => i.quantity));
             //  console.log(action.payload);
         },
