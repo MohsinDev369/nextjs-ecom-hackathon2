@@ -71,7 +71,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               <ToastWithAction>Add to cart</ToastWithAction>
 
               <p className="font-bold text-2xl text-[#212121]">
-                {product?.price}
+                ${product?.price}
               </p>
             </div>
           </div>
