@@ -19,7 +19,7 @@ const page = () => {
                 <div className="product-info">
                   <h3 className="text-lg font-bold">{product.namee}</h3>
                   {product.price && (
-                    <p className="text-gray-500">{product.price}</p>
+                    <p className="text-gray-500">${product.price}</p>
                   )}
                 </div>
                 <Button>View Product</Button>
