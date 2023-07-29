@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import {remove } from "@/Redux/CartSlice";
+import { add, clear } from "@/Redux/CartSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
@@ -50,8 +50,8 @@ const Cart = () => {
                     </span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <p className="text-sm">${item.quantity*item.price}</p>
-                    <Button onClick={() => dispatch(remove(item))}>
+                    <p className="text-sm">${item.quantity * item.price}</p>
+                    <Button onClick={() => dispatch(clear(item))}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
