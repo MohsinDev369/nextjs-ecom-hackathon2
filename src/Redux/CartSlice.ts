@@ -30,6 +30,13 @@ const cartSlice = createSlice({
             // console.log(state.cartItems.map(i => i.quantity));
             //  console.log(action.payload);
         },
+        remove(state, action) {
+            const product = state.cartItems.find((p) => p.slug === action.payload.slug);
+            // state.cartItems.push({ ...action.payload, quantity: action.payload.quantity + 1 })
+            product && product.quantity>1 ? state.cartItems[state.cartItems.indexOf(product)] = { ...action.payload, quantity: product.quantity - 1 } : undefined
+            // console.log(state.cartItems.map(i => i.quantity));
+            //  console.log(action.payload);
+        },
         clear(state, action) {
             const itemId = action.payload.slug;
             state.cartItems = state.cartItems.filter((item) => item.slug !== itemId);
@@ -38,5 +45,5 @@ const cartSlice = createSlice({
     }
 })
 
-export const { add, clear } = cartSlice.actions;
+export const { add, clear, remove } = cartSlice.actions;
 export default cartSlice.reducer;
