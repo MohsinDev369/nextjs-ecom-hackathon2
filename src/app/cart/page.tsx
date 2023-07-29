@@ -44,7 +44,10 @@ const Cart = () => {
                       value={item.quantity}
                       min="1"
                     />
-                    <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                    <span
+                      className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
+                      onClick={() => dispatch(add(item))}
+                    >
                       {" "}
                       +{" "}
                     </span>
