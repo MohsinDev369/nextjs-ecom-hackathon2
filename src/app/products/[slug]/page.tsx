@@ -66,7 +66,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             <div
               id="addtocart"
               className="flex items-center gap-4"
-              onClick={() => dispatch(add([ product,1]))}
+              onClick={() => dispatch(add([ product,count]))}
             >
               <ToastWithAction>Add to cart</ToastWithAction>
 
