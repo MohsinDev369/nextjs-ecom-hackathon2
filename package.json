@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "MohsinDev369",
+  "description": "This is a ecom next app made for hackathon",
   "repository": "https://github.com/MohsinDev369/mohsindev369-ecom-ui",
   "scripts": {
     "dev": "next dev",
