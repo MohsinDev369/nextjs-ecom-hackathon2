@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
-import products from "@/dum_db/db";
+// import products from "@/dum_db/db";
+import { getProducts } from "@/lib/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
-const page = () => {
+const page = async() => {
+  let products = await getProducts();
   return (
       <div className="flex flex-wrap gap-4 justify-center items-center">
         {products.map((product, i) => {
@@ -11,13 +13,13 @@ const page = () => {
               <Link href={`/product/${product.slug}`}>
                 <Image
                   src={product.src}
-                  alt={product.namee}
+                  alt={product.name}
                   width={300}
                   height={300}
                   className=""
                 />
                 <div className="product-info">
-                  <h3 className="text-lg font-bold">{product.namee}</h3>
+                  <h3 className="text-lg font-bold">{product.name}</h3>
                   {product.price && (
                     <p className="text-gray-500">${product.price}</p>
                   )}

@@ -1,3 +1,6 @@
+import productTypes from "@/types/product-types";
+
+
 let products = [
   {
     namee: "Brushed Raglan Sweatshirt",
@@ -176,4 +179,5 @@ let products = [
     ],
   },
 ];
+
 export default products;

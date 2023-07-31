@@ -1,14 +1,14 @@
 "use client";
 import products from "@/dum_db/db";
 import Image from "next/image";
-
+// import { getProducts } from "@/lib/sanity-utils";
 import { ToastWithAction } from "@/components/ToastWithAction";
 import { add } from "@/Redux/CartSlice";
 import { useDispatch } from "react-redux";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const [count, setCount] = useState(0);
   let product = products.find((i) => i.slug === params.slug);
   const dispatch = useDispatch();

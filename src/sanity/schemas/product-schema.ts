@@ -48,8 +48,8 @@ const product = {
             type: "number",
         },
         {
-            name: 'desc',
-            title: "Desc",
+            name: 'details',
+            title: "Details",
             type: "text",
         },
         {

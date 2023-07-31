@@ -4,9 +4,7 @@ import Hero from "@/components/Hero";
 import NewsLetter from "@/components/NewsLetter";
 import Promo from "@/components/Promo";
 
-
-
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Hero />

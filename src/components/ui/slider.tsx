@@ -1,23 +1,25 @@
 import Image from "next/image";
-import products from "../../dum_db/db";
-import Link from "next/link";
+// import products from "../../dum_db/db";
+import { getProducts } from "@/lib/sanity-utils";
 
-const slider = () => {
+import Link from "next/link";
+const slider = async () => {
+  let products = await getProducts()
    return (
      <div className="">
        <div className="flex gap-4 flex-wrap">
-         {products.map((product, index) => (
+         {products && products.map((product:any, index:any) => (
            <div key={index}>
              <Link href={`/products/${product.slug}`}>
                <Image
                  src={product.src}
-                 alt={product.namee}
+                 alt={product.name}
                  width={200}
                  height={200}
                  className=""
                />
                <div className="product-info">
-                 <h3 className="text-lg font-bold">{product.namee}</h3>
+                 <h3 className="text-lg font-bold">{product.name}</h3>
                  {product.price && (
                    <p className="text-gray-500">{product.price}</p>
                  )}
