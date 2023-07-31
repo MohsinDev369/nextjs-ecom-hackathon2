@@ -8,7 +8,7 @@ const page = () => {
         {products.map((product, i) => {
           return (
             <div key={i}>
-              <Link href={`/products/${product.slug}`}>
+              <Link href={`/product/${product.slug}`}>
                 <Image
                   src={product.src}
                   alt={product.namee}

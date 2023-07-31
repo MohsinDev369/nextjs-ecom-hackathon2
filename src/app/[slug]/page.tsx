@@ -11,7 +11,7 @@ export default function Page({ params }: { params: { slug: string } }): any {
           return (
             <div key={i}>
               {" "}
-              <Link href={`/products/${product.slug}`}>
+              <Link href={`/product/${product.slug}`}>
                 <Image
                   src={product.src}
                   alt={product.namee}
