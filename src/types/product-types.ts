@@ -1,6 +1,6 @@
 interface p {
-    name: string;
-    namee: string;
+    name?: string;
+    namee?: string;
     quantity: number;
     slug: string;
     src: string;

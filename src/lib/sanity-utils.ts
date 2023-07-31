@@ -5,7 +5,8 @@ export async function getProducts(): Promise<projectTypes> {
     return createClient({
         projectId: process.env.NEXT_PUBLIC_SANITY_STUDIO_PROJECT_ID as string,
         dataset: process.env.NEXT_PUBLIC_SANITY_STUDIO_DATASET as string,
-        apiVersion: "2023-07-30",
+      apiVersion: "2023-07-30",
+      useCdn: true
 }).fetch(
         groq`*[_type == "product"]{
       _id,

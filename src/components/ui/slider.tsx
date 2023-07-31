@@ -1,10 +1,11 @@
 import Image from "next/image";
-// import products from "../../dum_db/db";
-import { getProducts } from "@/lib/sanity-utils";
+import product from "../../dum_db/db";
+// import { getProducts } from "@/lib/sanity-utils";
 
 import Link from "next/link";
 const slider = async () => {
-  let products = await getProducts()
+  // let products = await getProducts()
+  let products = await product()
    return (
      <div className="">
        <div className="flex gap-4 flex-wrap">
