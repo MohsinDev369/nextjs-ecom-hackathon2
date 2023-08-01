@@ -7,7 +7,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
   let products = await product();
   return (
     <div className="flex flex-wrap gap-4 justify-center items-center">
-      {products.map((product:any, i) => {
+      {products.map((product: any, i) => {
+       console.log(product.category.toLowerCase(), params.slug);
         if (product.category.toLowerCase() === params.slug) {
           return (
             <div key={i}>
