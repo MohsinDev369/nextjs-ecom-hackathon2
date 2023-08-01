@@ -6,6 +6,7 @@ import Link from "next/link";
 const page = async () => {
   // let products = await getProducts();
   let products = await product();
+  console.log(products);
   return (
     <div className="flex flex-wrap gap-4 justify-center items-center">
       {products.map((product:any, i) => {

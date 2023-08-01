@@ -9,7 +9,7 @@ import {useState } from "react";
 export default function Page({ product }: { product: any }) {
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
-  // console.log(product);
+  console.log(product);
   return (
     <section className="bg-[#fcfcfc] sm:p-16 overflow-hidden">
       <div className="flex justify-between max-lg:flex-col">
