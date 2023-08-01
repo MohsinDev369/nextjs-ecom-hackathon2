@@ -20,16 +20,16 @@ const product = {
             title: "Image",
             type: "image",
             options: { hotspots: true },
-            fields: [{
-                name: 'alt',
-                title: "Alt",
-                type: "string"
-            }, {
-                name: "src",
-                title: "Src",
-                type:'string'
-            }
-        ]
+        //     fields: [{
+        //         name: 'alt',
+        //         title: "Alt",
+        //         type: "string"
+        //     }, {
+        //         name: "src",
+        //         title: "Src",
+        //         type:'string'
+        //     }
+        // ]
         },
         {
             name: 'price',

@@ -85,15 +85,15 @@ const Cart = () => {
         </div>
         {/* <!-- Sub total --> */}
         <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
-          <div className="mb-2 flex justify-between">
+          {/* <div className="mb-2 flex justify-between">
             <p className="text-gray-700">Subtotal</p>
             <p className="text-gray-700">$129.99</p>
-          </div>
-          <div className="flex justify-between">
+          </div> */}
+          {/* <div className="flex justify-between">
             <p className="text-gray-700">Shipping</p>
             <p className="text-gray-700">$4.99</p>
-          </div>
-          <hr className="my-4" />
+          </div> */}
+          {/* <hr className="my-4" /> */}
           <div className="flex justify-between">
             <p className="text-lg font-bold">Total</p>
             <div className="">

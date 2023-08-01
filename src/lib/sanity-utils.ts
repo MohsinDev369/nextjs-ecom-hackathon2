@@ -20,7 +20,7 @@ export async function getProducts(): Promise<projectTypes> {
       _id,
       name,
       "slug": slug.current,
-      "src": image.src,
+      "src": image.asset->url,
       quantity,
       "category":*[_id==^.category._ref][0].name,
       price,
