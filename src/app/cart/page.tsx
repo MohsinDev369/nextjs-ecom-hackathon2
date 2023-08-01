@@ -1,12 +1,16 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { add, clear, remove } from "@/Redux/CartSlice";
+import { add, clear, remove, caltotal } from "@/Redux/CartSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 const Cart = () => {
+  const { cartItems, total } = useSelector((state: any) => state.cart);
   const dispatch = useDispatch();
-  const { cartItems } = useSelector((state: any) => state.cart);
+  useEffect(() => {
+    dispatch(dispatch(caltotal()));
+  },)
   // console.log(cartItems);
   return (
     <div className="pt-20">
@@ -28,9 +32,9 @@ const Cart = () => {
               <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
                 <div className="mt-5 sm:mt-0">
                   <h2 className="text-lg font-bold text-gray-900">
-                    {item.namee}
+                    {item.name}
                   </h2>
-                  <p className="mt-1 text-xs text-gray-700">${item.price}</p>
+                  <p className="mt-1 text-sm text-gray-700">${item.price}</p>
                 </div>
                 <div className="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                   <div className="flex items-center border-gray-100">
@@ -49,7 +53,7 @@ const Cart = () => {
                     />
                     <span
                       className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
-                      onClick={() => dispatch(add([item,1]))}
+                      onClick={() => dispatch(add([item, 1]))}
                     >
                       {" "}
                       +{" "}
@@ -93,11 +97,13 @@ const Cart = () => {
           <div className="flex justify-between">
             <p className="text-lg font-bold">Total</p>
             <div className="">
-              <p className="mb-1 text-lg font-bold">$134.98 USD</p>
+              <p className="mb-1 text-lg font-bold">${total} USD</p>
               <p className="text-sm text-gray-700">including VAT</p>
             </div>
           </div>
-          <Button className="mt-6 w-full rounded-md py-1.5 font-medium text-blue-50">
+          <Button
+            className="mt-6 w-full rounded-md py-1.5 font-medium text-blue-50"
+          >
             Check out
           </Button>
         </div>

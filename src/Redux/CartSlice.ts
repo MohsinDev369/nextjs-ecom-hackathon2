@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState: {
     cartItems: {
-        namee: string;
+        name: string;
         quantity: number;
         slug: string;
         src: string;
-        price: string;
+        price: number;
         category: string;
         details: string;
         care: string[];
@@ -15,7 +15,7 @@ const initialState: {
 } = {
     cartItems: [],
     amount: 4,
-    total: 0,
+    total: 123,
     isLoading: true,
 };
 
@@ -45,10 +45,20 @@ const cartSlice = createSlice({
         clear(state, action) {
             const itemId = action.payload.slug;
             state.cartItems = state.cartItems.filter((item) => item.slug !== itemId);
+        },
+        caltotal(state) {
+            let amount = 0
+            let total = 0
+            state.cartItems.forEach((item) => {
+                amount += item.quantity
+                total += item.quantity * item.price
+            })
+            state.amount = amount;
+            state.total = total;
         }
         
     }
 })
 
-export const { add, clear, remove } = cartSlice.actions;
+export const { add, clear, remove, caltotal } = cartSlice.actions;
 export default cartSlice.reducer;

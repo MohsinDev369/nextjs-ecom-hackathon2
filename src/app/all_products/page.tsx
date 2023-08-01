@@ -9,7 +9,7 @@ const page = async () => {
   // console.log(products);
   return (
     <div className="flex flex-wrap gap-4 justify-center items-center">
-      {products.map((product:any, i) => {
+      {products && products.map((product: any, i) => {
         return (
           <div key={i}>
             <Link href={`/product/${product.slug}`}>

@@ -4,12 +4,12 @@ import { ToastWithAction } from "@/components/ToastWithAction";
 import { add } from "@/Redux/CartSlice";
 import { useDispatch } from "react-redux";
 import { Button } from "@/components/ui/button";
-import {useState } from "react";
+import { useState } from "react";
 
 export default function Page({ product }: { product: any }) {
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
-  console.log(product);
+  // console.log(product);
   return (
     <section className="bg-[#fcfcfc] sm:p-16 overflow-hidden">
       <div className="flex justify-between max-lg:flex-col">
@@ -18,12 +18,14 @@ export default function Page({ product }: { product: any }) {
           className="flex flex-grow-[2] flex-shrink-[1] gap-8"
         >
           <div className="flex flex-col gap-4">
-            <Image
-              src={`${product?.src}`}
-              alt={product.name}
-              height={100}
-              width={100}
-            />
+            {product.src && (
+              <Image
+                src={`${product?.src}`}
+                alt={product.name}
+                height={100}
+                width={100}
+              />
+            )}
           </div>
           <div className="w-[80%] h-full">
             <Image

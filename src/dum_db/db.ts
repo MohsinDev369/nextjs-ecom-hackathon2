@@ -1,4 +1,3 @@
-import productTypes from "@/types/product-types";
 import { getProducts } from "@/lib/sanity-utils";
 
 let products= async() => {

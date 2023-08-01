@@ -11,7 +11,7 @@ const slider = async () => {
        <div className="flex gap-4 flex-wrap">
          {products && products.map((product:any, index:any) => (
            <div key={index}>
-             <Link href={`/products/${product.slug}`}>
+             <Link href={`/product/${product.slug}`}>
                <Image
                  src={product.src}
                  alt={product.name}
