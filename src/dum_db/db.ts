@@ -1,6 +1,6 @@
 import { getProducts } from "@/lib/sanity-utils";
 
-let products= async() => {
+let products = async () => {
   return await getProducts();
 }
 

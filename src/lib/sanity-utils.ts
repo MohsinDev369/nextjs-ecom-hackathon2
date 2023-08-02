@@ -8,7 +8,8 @@ export async function getProducts(): Promise<projectTypes> {
       apiVersion: "2023-07-30",
       useCdn: true
     })
-  
+  // console.log('getProduct function called');
+
   fetchData.fetch(
     groq`*[_type == "category"]{
       _id,

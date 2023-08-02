@@ -14,8 +14,8 @@ const initialState: {
     }[], amount: number, total: number, isLoading: boolean
 } = {
     cartItems: [],
-    amount: 4,
-    total: 123,
+    amount: 0,
+    total: 0,
     isLoading: true,
 };
 
