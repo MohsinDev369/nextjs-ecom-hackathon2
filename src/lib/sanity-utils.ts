@@ -27,6 +27,7 @@ export async function getProducts(): Promise<projectTypes> {
       price,
       details,
       care
-    }`
+    }`,
+    { next: { tags: ['collection'] } }
   )
 }
