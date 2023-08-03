@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { revalidateTag } from 'next/cache'
 
 // e.g a webhook to `your-website.com/api/revalidate?tag=collection&secret=<token>`
-// e.g a webhook to `http://localhost:3000/api/revalidate?tag=collection&secret=h2828d8dej494irjiojk34`
+// e.g a webhook to `http://localhost:3000/api/revalidate?tag=collection&secret=<token>`
 export async function GET(request: NextRequest, res: NextApiResponse) {
     // Check for secret to confirm this is a valid request
     if (
