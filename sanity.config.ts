@@ -7,7 +7,7 @@ const config = defineConfig({
     dataset: process.env.NEXT_PUBLIC_SANITY_STUDIO_DATASET as string,
     title: "ecom website",
     apiVersion: "2023-07-30",
-    basePath: "/studio",
+    basePath: "/admin",
     plugins: [deskTool()],
     schema: { types: schemas }
 })

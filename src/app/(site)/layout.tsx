@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import "./globals.css";
+import "../globals.css";
 import { Sora } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
