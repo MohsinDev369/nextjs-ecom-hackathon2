@@ -7,7 +7,7 @@ import { revalidateTag } from 'next/cache'
 export async function GET(request: NextRequest, res: NextApiResponse) {
     // Check for secret to confirm this is a valid request
     if (
-        request.nextUrl.searchParams.get('secret') !== process.env.MY_SECRET_TOKEN
+        request.nextUrl.searchParams.get('secret') !== process.env.NEXT_PUBLIC_MY_SECRET_TOKEN
     ) {
         return res.status(401).json({ message: 'Invalid token' })
     }
