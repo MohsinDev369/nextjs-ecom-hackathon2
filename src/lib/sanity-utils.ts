@@ -28,6 +28,6 @@ export async function getProducts(): Promise<projectTypes> {
       details,
       care
     }`,
-    { next: { tags: ['collection'] } }
+    
   )
 }
