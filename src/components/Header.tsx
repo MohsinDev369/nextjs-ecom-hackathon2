@@ -33,7 +33,7 @@ const Header = () => {
           <Link href={"/kids"}>
             <li>Kids</li>
           </Link>
-          <Link href={"/all_products"}>
+          <Link href={"/allproducts"}>
             <li>All Products</li>
           </Link>
         </ul>
@@ -126,7 +126,7 @@ const Header = () => {
                       <li>Kids</li>
                     </SheetClose>
                   </Link>
-                  <Link href={"/all_products"}>
+                  <Link href={"/allproducts"}>
                     <SheetClose asChild>
                       <li>All Products</li>
                     </SheetClose>
