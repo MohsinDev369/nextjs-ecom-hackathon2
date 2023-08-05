@@ -31,7 +31,7 @@ const cartSlice = createSlice({
             const product = state.cartItems.find((p) => p.slug === item.slug /*|| console.log(p.slug,item.slug) */);
             // console.log(product);
             // state.cartItems.push({ ...action.payload, quantity: action.payload.quantity + 1 })
-            product ? state.cartItems[state.cartItems.indexOf(product)] = { ...item, quantity: product.quantity + n } : state.cartItems.push({ ...item, quantity: item.quantity + n })
+            product ? state.cartItems[state.cartItems.indexOf(product)] = { ...item, quantity: product.quantity + n } : state.cartItems.push({ ...item, quantity: n })
             // console.log(state.cartItems.map(i => i.slug));
             //  console.log(action.payload);
         },

@@ -43,8 +43,8 @@ const product = {
             
         },
         {
-            name: 'quantity',
-            title: "Quantity",
+            name: 'ininventory',
+            title: "inInventory",
             type: "number",
         },
         {
