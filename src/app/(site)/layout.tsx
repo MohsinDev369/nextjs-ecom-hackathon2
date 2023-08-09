@@ -4,7 +4,7 @@ import { Sora } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import ReduxProvider from "@/Redux/ReduxProvider";
-
+import AuthProvider from "../AuthContext/AuthProvider";
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata = {
@@ -21,8 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sora.className} container`}>
         <ReduxProvider>
-          <Header />
-          <main>{children}</main>
+          <AuthProvider>
+            <Header />
+            <main>{children}</main>
+          </AuthProvider>
         </ReduxProvider>
         <Toaster />
         <Footer />

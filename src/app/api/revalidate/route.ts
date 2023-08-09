@@ -12,8 +12,8 @@ export async function GET(request: NextRequest, res: NextApiResponse) {
         return res.status(401).json({ message: 'Invalid token' })
     }
 
-    const path = request.nextUrl.searchParams.get('path')
-    path && revalidateTag(path)
-    // console.log("revalidate");
+    const tag = request.nextUrl.searchParams.get('tag')
+    tag && revalidateTag(tag)
+    console.log("revalidated");
     return NextResponse.json({ revalidated: true, now: Date.now() })
 }
