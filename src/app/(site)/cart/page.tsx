@@ -4,13 +4,15 @@ import Image from "next/image";
 import { add, clear, remove, caltotal } from "@/Redux/CartSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-
+import Link from "next/link";
 const Cart = () => {
-  const { cartItems, total } = useSelector((state: any) => state.cart);
+  const { cartItems, total, ReduxUser } = useSelector(
+    (state: any) => state.cart
+  );
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(dispatch(caltotal()));
-  },)
+  });
   // console.log(cartItems);
   return (
     <div className="pt-20">
@@ -101,11 +103,27 @@ const Cart = () => {
               <p className="text-sm text-gray-700">including VAT</p>
             </div>
           </div>
-          <Button
-            className="mt-6 w-full rounded-md py-1.5 font-medium text-blue-50"
-          >
-            Check out
-          </Button>
+          <Link href={"./../login"}>
+            <Button className="mt-6 w-full rounded-md py-1.5 font-medium text-blue-50">
+              Check out
+            </Button>
+          </Link>
+          {ReduxUser.name ? (
+            <div className="flex justify-between mt-4 items-center">
+              <Image src={ReduxUser.image}  alt="user image" height={100} width={100} className="w-auto h-12"/>
+              <div className="">
+                <p className="mb-1 text-lg"></p>
+                <p className="text-sm text-gray-700">{ReduxUser.name}</p>
+              
+              </div>
+            </div>
+          ) : (
+            <Link href={"./../login"}>
+              <Button className="mt-6 w-full rounded-md py-1.5 font-medium text-blue-50">
+                Sign In with Goole
+              </Button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

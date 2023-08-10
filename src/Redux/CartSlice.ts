@@ -11,12 +11,16 @@ const initialState: {
         category: string;
         details: string;
         care: string[];
-    }[], amount: number, total: number, isLoading: boolean
+    }[], amount: number, total: number, ReduxUser: { name:string, email:string, image:string  } 
 } = {
     cartItems: [],
     amount: 0,
     total: 0,
-    isLoading: true,
+    ReduxUser: {
+        name: "",
+        email: "",
+        image: ""
+    },
 };
 
 const cartSlice = createSlice({
@@ -55,10 +59,14 @@ const cartSlice = createSlice({
             })
             state.amount = amount;
             state.total = total;
+        },
+        addUser(state,action) {
+            state.ReduxUser = action.payload
+            // console.log(state.ReduxUser);
         }
         
     }
 })
 
-export const { add, clear, remove, caltotal } = cartSlice.actions;
+export const { add, clear, remove, caltotal, addUser } = cartSlice.actions;
 export default cartSlice.reducer;
