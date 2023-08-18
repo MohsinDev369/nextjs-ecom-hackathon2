@@ -5,6 +5,8 @@ import { add, clear, remove, caltotal } from "@/Redux/CartSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Link from "next/link";
+import CheckOutBtn from "./checkoutBtn";
+
 const Cart = () => {
   const { cartItems, total, ReduxUser } = useSelector(
     (state: any) => state.cart
@@ -103,18 +105,19 @@ const Cart = () => {
               <p className="text-sm text-gray-700">including VAT</p>
             </div>
           </div>
-          <Link href={"./../login"}>
-            <Button className="mt-6 w-full rounded-md py-1.5 font-medium text-blue-50">
-              Check out
-            </Button>
-          </Link>
+          <CheckOutBtn />
           {ReduxUser.name ? (
             <div className="flex justify-between mt-4 items-center">
-              <Image src={ReduxUser.image}  alt="user image" height={100} width={100} className="w-auto h-12"/>
+              <Image
+                src={ReduxUser.image}
+                alt="user image"
+                height={100}
+                width={100}
+                className="w-auto h-12"
+              />
               <div className="">
                 <p className="mb-1 text-lg"></p>
                 <p className="text-sm text-gray-700">{ReduxUser.name}</p>
-              
               </div>
             </div>
           ) : (
