@@ -1,6 +1,6 @@
 import { NextApiResponse } from 'next'
 import { NextRequest, NextResponse } from 'next/server'
-import { revalidateTag } from 'next/cache'
+import { revalidatePath } from 'next/cache'
 
 // e.g a webhook to `your-website.com/api/revalidate?tag=collection&secret=<token>`
 // e.g a webhook to `http://localhost:3000/api/revalidate?tag=collection&secret=<token>`
@@ -12,8 +12,12 @@ export async function GET(request: NextRequest, res: NextApiResponse) {
         return res.status(401).json({ message: 'Invalid token' })
     }
 
-    const tag = request.nextUrl.searchParams.get('tag')
-    tag && revalidateTag(tag)
+    const path = request.nextUrl.searchParams.get('path')
+    path && revalidatePath("/")
+    path && revalidatePath("/male")
+    path && revalidatePath("/femail")
+    path && revalidatePath("/kids")
+    path && revalidatePath("/allproducts")
     console.log("revalidated");
     return NextResponse.json({ revalidated: true, now: Date.now() })
 }
