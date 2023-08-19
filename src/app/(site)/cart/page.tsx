@@ -106,7 +106,7 @@ const Cart = () => {
             </div>
           </div>
           <CheckOutBtn />
-          {ReduxUser.name ? (
+          {/* {ReduxUser.name ? (
             <div className="flex justify-between mt-4 items-center">
               <Image
                 src={ReduxUser.image}
@@ -126,7 +126,7 @@ const Cart = () => {
                 Sign In with Goole
               </Button>
             </Link>
-          )}
+          )} */}
         </div>
       </div>
     </div>
