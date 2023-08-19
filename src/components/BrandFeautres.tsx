@@ -50,7 +50,7 @@ const BrandFeautres = () => {
           className="flex justify-center items-center gap-10 max-sm:flex-col"
         >
           <Image
-            src={"/assets/img_slider/slider_img7.png"}
+            src={"/assets/product_img/slider_img7.png"}
             alt="image of hood girl"
             width={400}
             height={400}
