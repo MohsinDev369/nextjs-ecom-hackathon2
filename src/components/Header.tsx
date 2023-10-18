@@ -19,7 +19,7 @@ const Header = () => {
     <header className="flex my-8 p-2 sm:justify-between max-sm:justify-between items-center gap-2 sticky top-0 z-10 bg-white">
       <div className="mr-4">
         <Link href={"/"} className="text-xl font-extrabold">
-          Mohsin E Shop
+          Dine Market
         </Link>
       </div>
       <nav className="max-sm:hidden">
